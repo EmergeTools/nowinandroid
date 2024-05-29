@@ -31,6 +31,13 @@ plugins {
 emerge {
     // API key automatically set by the EMERGE_API_TOKEN environment variable
 
+    vcs {
+        gitHub {
+            repoName.set("nowinandroid")
+            repoOwner.set("EmergeTools")
+        }
+    }
+
     snapshots {
         tag.set("snapshot")
     }
