@@ -29,6 +29,8 @@ plugins {
 }
 
 emerge {
+    // API key automatically set by the EMERGE_API_TOKEN environment variable
+
     snapshots {
         tag.set("snapshot")
     }
