@@ -37,6 +37,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
+import com.emergetools.snapshots.annotations.IgnoreEmergeSnapshot
 import com.google.samples.apps.nowinandroid.core.analytics.LocalAnalyticsHelper
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
 import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
@@ -124,6 +125,7 @@ sealed interface NewsFeedUiState {
     ) : NewsFeedUiState
 }
 
+@IgnoreEmergeSnapshot
 @Preview
 @Composable
 private fun NewsFeedLoadingPreview() {
