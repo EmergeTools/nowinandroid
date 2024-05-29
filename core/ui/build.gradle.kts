@@ -36,7 +36,7 @@ dependencies {
     implementation(libs.coil.kt)
     implementation(libs.coil.kt.compose)
 
-    debugImplementation(libs.emerge.snapshots.annotations)
+    implementation(libs.emerge.snapshots.annotations)
 
     androidTestImplementation(projects.core.testing)
 }
