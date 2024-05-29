@@ -30,8 +30,8 @@ import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaBackg
 import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaLoadingWheel
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
 import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.ui.DevicePreviews
 import com.google.samples.apps.nowinandroid.core.ui.FollowableTopicPreviewParameterProvider
+import com.google.samples.apps.nowinandroid.core.ui.SnapshotTestingPreviews
 import com.google.samples.apps.nowinandroid.core.ui.TrackScreenViewEvent
 
 @Composable
@@ -95,7 +95,7 @@ private fun InterestsEmptyScreen() {
     Text(text = stringResource(id = R.string.feature_interests_empty_header))
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun InterestsScreenPopulated(
     @PreviewParameter(FollowableTopicPreviewParameterProvider::class)
@@ -115,7 +115,7 @@ fun InterestsScreenPopulated(
     }
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun InterestsScreenLoading() {
     NiaTheme {
@@ -129,7 +129,7 @@ fun InterestsScreenLoading() {
     }
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun InterestsScreenEmpty() {
     NiaTheme {

@@ -63,7 +63,7 @@ import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
 import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
 import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
-import com.google.samples.apps.nowinandroid.core.ui.DevicePreviews
+import com.google.samples.apps.nowinandroid.core.ui.SnapshotTestingPreviews
 import com.google.samples.apps.nowinandroid.core.ui.TrackScreenViewEvent
 import com.google.samples.apps.nowinandroid.core.ui.TrackScrollJank
 import com.google.samples.apps.nowinandroid.core.ui.UserNewsResourcePreviewParameterProvider
@@ -315,7 +315,7 @@ private fun TopicToolbar(
     }
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun TopicScreenPopulated(
     @PreviewParameter(UserNewsResourcePreviewParameterProvider::class)
@@ -337,7 +337,7 @@ fun TopicScreenPopulated(
     }
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun TopicScreenLoading() {
     NiaTheme {

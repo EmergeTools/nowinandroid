@@ -97,8 +97,8 @@ import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollba
 import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
 import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
-import com.google.samples.apps.nowinandroid.core.ui.DevicePreviews
 import com.google.samples.apps.nowinandroid.core.ui.NewsFeedUiState
+import com.google.samples.apps.nowinandroid.core.ui.SnapshotTestingPreviews
 import com.google.samples.apps.nowinandroid.core.ui.TrackScreenViewEvent
 import com.google.samples.apps.nowinandroid.core.ui.TrackScrollJank
 import com.google.samples.apps.nowinandroid.core.ui.UserNewsResourcePreviewParameterProvider
@@ -501,7 +501,7 @@ private fun feedItemsSize(
     return feedSize + onboardingSize
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun ForYouScreenPopulatedFeed(
     @PreviewParameter(UserNewsResourcePreviewParameterProvider::class)
@@ -525,7 +525,7 @@ fun ForYouScreenPopulatedFeed(
     }
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun ForYouScreenOfflinePopulatedFeed(
     @PreviewParameter(UserNewsResourcePreviewParameterProvider::class)
@@ -549,7 +549,7 @@ fun ForYouScreenOfflinePopulatedFeed(
     }
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun ForYouScreenTopicSelection(
     @PreviewParameter(UserNewsResourcePreviewParameterProvider::class)
@@ -576,7 +576,7 @@ fun ForYouScreenTopicSelection(
     }
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun ForYouScreenLoading() {
     NiaTheme {
@@ -595,7 +595,7 @@ fun ForYouScreenLoading() {
     }
 }
 
-@DevicePreviews
+@SnapshotTestingPreviews
 @Composable
 fun ForYouScreenPopulatedAndLoading(
     @PreviewParameter(UserNewsResourcePreviewParameterProvider::class)
