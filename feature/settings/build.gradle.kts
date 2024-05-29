@@ -29,7 +29,7 @@ dependencies {
     implementation(libs.google.oss.licenses)
     implementation(projects.core.data)
 
-    debugImplementation(libs.emerge.snapshots.annotations)
+    implementation(libs.emerge.snapshots.annotations)
 
     testImplementation(projects.core.testing)
 
