@@ -25,6 +25,13 @@ plugins {
     id("com.google.android.gms.oss-licenses-plugin")
     alias(libs.plugins.baselineprofile)
     alias(libs.plugins.roborazzi)
+    alias(libs.plugins.emerge)
+}
+
+emerge {
+    snapshots {
+        tag.set("snapshot")
+    }
 }
 
 android {
@@ -107,6 +114,7 @@ dependencies {
     ksp(libs.hilt.compiler)
 
     debugImplementation(libs.androidx.compose.ui.testManifest)
+    debugImplementation(libs.emerge.snapshots.annotations)
     debugImplementation(projects.uiTestHiltManifest)
 
     kspTest(libs.hilt.compiler)
@@ -129,6 +137,7 @@ dependencies {
     androidTestImplementation(libs.androidx.navigation.testing)
     androidTestImplementation(libs.androidx.compose.ui.test)
     androidTestImplementation(libs.hilt.android.testing)
+    androidTestImplementation(libs.emerge.snapshots)
 
     baselineProfile(projects.benchmarks)
 }
