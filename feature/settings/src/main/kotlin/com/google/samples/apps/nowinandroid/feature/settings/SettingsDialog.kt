@@ -285,7 +285,6 @@ private fun LinksPanel() {
     }
 }
 
-
 @IgnoreEmergeSnapshot
 @Preview
 @Composable
@@ -306,7 +305,6 @@ private fun PreviewSettingsDialog() {
         )
     }
 }
-
 
 @IgnoreEmergeSnapshot
 @Preview
