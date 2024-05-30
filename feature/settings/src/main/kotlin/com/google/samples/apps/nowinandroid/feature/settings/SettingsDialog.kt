@@ -55,6 +55,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.emergetools.snapshots.annotations.IgnoreEmergeSnapshot
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaTextButton
 import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
@@ -284,6 +285,7 @@ private fun LinksPanel() {
     }
 }
 
+@IgnoreEmergeSnapshot
 @Preview
 @Composable
 private fun PreviewSettingsDialog() {
@@ -304,6 +306,7 @@ private fun PreviewSettingsDialog() {
     }
 }
 
+@IgnoreEmergeSnapshot
 @Preview
 @Composable
 private fun PreviewSettingsDialogLoading() {

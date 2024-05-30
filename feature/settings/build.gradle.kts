@@ -29,6 +29,8 @@ dependencies {
     implementation(libs.google.oss.licenses)
     implementation(projects.core.data)
 
+    implementation(libs.emerge.snapshots.annotations)
+
     testImplementation(projects.core.testing)
 
     androidTestImplementation(projects.core.testing)
