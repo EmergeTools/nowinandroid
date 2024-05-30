@@ -25,6 +25,22 @@ plugins {
     id("com.google.android.gms.oss-licenses-plugin")
     alias(libs.plugins.baselineprofile)
     alias(libs.plugins.roborazzi)
+    alias(libs.plugins.emerge)
+}
+
+emerge {
+    // API token automatically set by the EMERGE_API_TOKEN environment variable
+
+    snapshots {
+        tag.set("snapshot")
+    }
+
+    vcs {
+        gitHub {
+            repoName.set("nowinandroid")
+            repoOwner.set("EmergeTools")
+        }
+    }
 }
 
 android {
@@ -122,6 +138,7 @@ dependencies {
     testDemoImplementation(libs.roborazzi)
     testDemoImplementation(projects.core.screenshotTesting)
 
+    androidTestImplementation(libs.emerge.snapshots)
     androidTestImplementation(projects.core.testing)
     androidTestImplementation(projects.core.dataTest)
     androidTestImplementation(projects.core.datastoreTest)
