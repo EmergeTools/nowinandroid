@@ -20,6 +20,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
@@ -28,6 +29,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.selected
@@ -60,7 +62,9 @@ fun InterestsItem(
             Text(text = name)
         },
         supportingContent = {
-            Text(text = description)
+            if (description.isNotEmpty()) {
+                Text(text = description)
+            }
         },
         trailingContent = {
             NiaIconToggleButton(
@@ -103,9 +107,7 @@ fun InterestsItem(
 private fun InterestsIcon(topicImageUrl: String, modifier: Modifier = Modifier) {
     if (topicImageUrl.isEmpty()) {
         Icon(
-            modifier = modifier
-                .background(MaterialTheme.colorScheme.surface)
-                .padding(4.dp),
+            modifier = modifier.padding(4.dp),
             imageVector = NiaIcons.Person,
             // decorative image
             contentDescription = null,
