@@ -16,7 +16,6 @@
 
 package com.google.samples.apps.nowinandroid.core.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -60,7 +59,9 @@ fun InterestsItem(
             Text(text = name)
         },
         supportingContent = {
-            Text(text = description)
+            if (description.isNotEmpty()) {
+                Text(text = description)
+            }
         },
         trailingContent = {
             NiaIconToggleButton(
@@ -103,9 +104,7 @@ fun InterestsItem(
 private fun InterestsIcon(topicImageUrl: String, modifier: Modifier = Modifier) {
     if (topicImageUrl.isEmpty()) {
         Icon(
-            modifier = modifier
-                .background(MaterialTheme.colorScheme.surface)
-                .padding(4.dp),
+            modifier = modifier.padding(4.dp),
             imageVector = NiaIcons.Person,
             // decorative image
             contentDescription = null,
